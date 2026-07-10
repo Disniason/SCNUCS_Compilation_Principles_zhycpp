@@ -34,3 +34,11 @@
 
 本仓库中所有代码均在命名空间zhy以内，这就意味着所有的标识符不会与其它库和你自己定义的标识符有命名冲突。类似于万能头文件"bits/stdc++.h"，最后本人会将所有的头文件用一个新的头文件"zhycpp.h"包含。
 
+更新与修复日志：
+
+2026.07.10：
+
+1. Zlalr.h文件中的SLR(1)文法判断存在知识性错误，原本的代码是判断LR(0)文法的逻辑，因此在这里补充了判断SLR(1)文法的代码；同时原本判断LR(0)文法的代码也存在逻辑错误；grammar_first_follow_set新增了一些相关的函数。
+
+2. 在Zlalr.h文件中新增了lr1_grammar_dfa_node::selfMergeLookAheads、grammar_lr1_dfa_graph::nodeMergeLookAheads等函数，原来的LR(1)DFA图没有合并结点内相同核心项目的展望符，在这里补充了这一逻辑；以及重构了lr1_grammar_dfa_node::mergeLookAheads函数。
+
