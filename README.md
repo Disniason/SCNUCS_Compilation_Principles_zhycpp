@@ -42,3 +42,6 @@
 
 2. 在Zlalr.h文件中新增了lr1_grammar_dfa_node::selfMergeLookAheads、grammar_lr1_dfa_graph::nodeMergeLookAheads等函数，原来的LR(1)DFA图没有合并结点内相同核心项目的展望符，在这里补充了这一逻辑；以及重构了lr1_grammar_dfa_node::mergeLookAheads函数。
 
+2026.07.12：
+
+1. 在文件Zregexp.h中增加了递归下降正则表达式转NFA图的相关代码；增加了regexp_tester静态测试类。
